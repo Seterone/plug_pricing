@@ -1,4 +1,5 @@
 {
   "0.1": "fw2.bin",
-  "0.2": "fw3.bin"
+  "0.2": "fw3.bin",
+  "0.5": "HTTPS_signed.bin"
 }
