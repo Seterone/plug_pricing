@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+    <script>
+        // Function to get query parameters
+        function getQueryParams() {
+            const params = {};
+            const queryString = window.location.search.substring(1);
+            const queries = queryString.split("&");
+            queries.forEach(query => {
+                const [key, value] = query.split("=");
+                params[key] = value;
+            });
+            return params;
+        }
+
+        // Check firmware version
+        function checkFirmwareVersion() {
+            const params = getQueryParams();
+            if (params.firmware_version === "0.1") {
+                document.write("firmware_0_2.bin");
+            } else {
+                document.write("Invalid_firmware");
+            }
+        }
+
+        // Run the check on page load
+        window.onload = checkFirmwareVersion;
+    </script>
+</body>
+</html>
+
+
